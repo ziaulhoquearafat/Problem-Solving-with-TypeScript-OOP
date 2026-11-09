@@ -1,10 +1,10 @@
 function multiplyValue(value: number, multiplier?: number): number {
   return value * (multiplier === undefined ? 2 : multiplier);
 }
-
 multiplyValue(10);
 multiplyValue(10, 5);
 multiplyValue(7, 0);
+
 
 type AcceptedValue = string | number | boolean;
 
@@ -19,9 +19,17 @@ function processInput(value: AcceptedValue): string | number {
     return value ? "Active" : "Inactive";
   }
 }
-
 processInput("  TypeScript  ");
 processInput(7);
 processInput(true);
 processInput(false);
+
+
+type LatLongDis = readonly [latitude: number, longitude: number, locationName: string] 
+function formatCoordinate(value: LatLongDis): string{
+    const [latitude, longitude, locationName] = value
+    return `Location: ${locationName} (${latitude}, ${longitude})`
+}
+formatCoordinate([23.81, 90.41, "Dhaka"]);
+formatCoordinate([22.35, 91.78, "Chittagong"]);
 
