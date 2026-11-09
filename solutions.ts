@@ -5,7 +5,6 @@ multiplyValue(10);
 multiplyValue(10, 5);
 multiplyValue(7, 0);
 
-
 type AcceptedValue = string | number | boolean;
 
 function processInput(value: AcceptedValue): string | number {
@@ -14,8 +13,7 @@ function processInput(value: AcceptedValue): string | number {
   }
   if (typeof value === "number") {
     return value * 10;
-  }
-  else {
+  } else {
     return value ? "Active" : "Inactive";
   }
 }
@@ -24,21 +22,39 @@ processInput(7);
 processInput(true);
 processInput(false);
 
-
-type LatLongDis = readonly [latitude: number, longitude: number, locationName: string] 
-function formatCoordinate(coordinate: LatLongDis): string{
-    const [latitude, longitude, locationName] = coordinate
-    return `Location: ${locationName} (${latitude}, ${longitude})`
+type LatLongDis = readonly [
+  latitude: number,
+  longitude: number,
+  locationName: string,
+];
+function formatCoordinate(coordinate: LatLongDis): string {
+  const [latitude, longitude, locationName] = coordinate;
+  return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 formatCoordinate([23.81, 90.41, "Dhaka"]);
 formatCoordinate([22.35, 91.78, "Chittagong"]);
 
-
-function concatenateArrays<T>(...arrays: T[][]):T[]{
-    return arrays.flat()
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  return arrays.flat();
 }
 concatenateArrays(["a", "b"], ["c", "d"]);
 concatenateArrays([1, 2], [3, 4], [5]);
 
+interface Course {
+  title: string;
+  students: number;
+  isPublished: boolean;
+}
 
+function getPopularCourses(courses: Course[], minStudents:number): Course[]{
+    return courses.filter((course)=> course.isPublished && course.students >= minStudents)
+}
+
+const courses = [
+  { title: "TypeScript Mastery", students: 120, isPublished: true },
+  { title: "Draft Course", students: 200, isPublished: false },
+  { title: "Basic HTML", students: 45, isPublished: true },
+  { title: "Next.js Pro", students: 85, isPublished: true }
+];
+getPopularCourses(courses, 80);
 
