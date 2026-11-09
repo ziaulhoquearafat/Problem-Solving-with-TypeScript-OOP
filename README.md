@@ -201,9 +201,9 @@ This repository also includes two written articles documenting key concepts lear
 
 ## Author
 
-**[Your Name]**
+**[Ziaul Hoque Arafat]**
 
-Aspiring Software Engineer | MERN Stack Developer | TypeScript Learner
+Aspiring Software Engineer | MERN Stack Developer
 
 - **GitHub:** [GitHub Profile](https://github.com/ziaulhoquearafat)
 - **Portfolio:** [Portfolio](https://arafat-dev-space.vercel.app/)
