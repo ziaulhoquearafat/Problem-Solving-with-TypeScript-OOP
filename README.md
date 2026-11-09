@@ -154,7 +154,7 @@ git clone YOUR_REPOSITORY_URL
 **2. Navigate to the project directory**
 
 ```bash
-cd typescript-fundamentals
+cd problem-solving-with-typescript-oop
 ```
 
 **3. Install TypeScript if it is not already available**
