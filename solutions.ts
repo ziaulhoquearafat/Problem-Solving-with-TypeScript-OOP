@@ -26,8 +26,8 @@ processInput(false);
 
 
 type LatLongDis = readonly [latitude: number, longitude: number, locationName: string] 
-function formatCoordinate(value: LatLongDis): string{
-    const [latitude, longitude, locationName] = value
+function formatCoordinate(coordinate: LatLongDis): string{
+    const [latitude, longitude, locationName] = coordinate
     return `Location: ${locationName} (${latitude}, ${longitude})`
 }
 formatCoordinate([23.81, 90.41, "Dhaka"]);
