@@ -196,8 +196,8 @@ The primary learning objectives of this project are:
 
 This repository also includes two written articles documenting key concepts learned during the project.
 
-1. **[Blog Post 01 — Blog Title](blog-name-1.md)**
-2. **[Blog Post 02 — Blog Title](blog-name-2.md)**
+1. **[Blog Post 01 — Blog Title](type-vs-interface.md)**
+2. **[Blog Post 02 — Blog Title](typescript-access-modifiers.md)**
 
 ## Author
 
